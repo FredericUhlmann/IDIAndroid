@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Random;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends DrawerActivity {
     private FilmData filmData;
 
     @Override
@@ -17,23 +19,30 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        /*//obrir drawer activity
+        startActivity(new Intent(MainActivity.this, DrawerActivity.class));
+        */
+
         filmData = new FilmData(this);
         filmData.open();
 
         List<Film> values = filmData.getAllFilms();
-
+        //ListView lv = (ListView) findViewById(R.id.listmain);
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
         ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, values);
-        setListAdapter(adapter);
+
+        ListView lv = (ListView) findViewById(R.id.listmain);
+        lv.setAdapter(adapter);
     }
 
     // Will be called via the onClick attribute
     // of the buttons in main.xml
     public void onClick(View view) {
         @SuppressWarnings("unchecked")
-        ArrayAdapter<Film> adapter = (ArrayAdapter<Film>) getListAdapter();
+        ListView lv = (ListView) findViewById(R.id.listmain);
+        ArrayAdapter<Film> adapter = (ArrayAdapter<Film>) lv.getAdapter();
         Film film;
         switch (view.getId()) {
             case R.id.add:
@@ -44,8 +53,8 @@ public class MainActivity extends ListActivity {
                 adapter.add(film);
                 break;
             case R.id.delete:
-                if (getListAdapter().getCount() > 0) {
-                    film = (Film) getListAdapter().getItem(0);
+                if (lv.getCount() > 0) {
+                    film = (Film) lv.getAdapter().getItem(lv.getAdapter().getCount()-1);
                     filmData.deleteFilm(film);
                     adapter.remove(film);
                 }
