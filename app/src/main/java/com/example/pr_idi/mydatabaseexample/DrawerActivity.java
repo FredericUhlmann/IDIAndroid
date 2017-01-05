@@ -1,5 +1,6 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -126,8 +127,8 @@ public class DrawerActivity extends AppCompatActivity
             // save the new film to the database
             film = filmData.createFilm(newFilm[0], newFilm[0]);
             adapter.add(film);
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.cercar) {
+            startActivity(new Intent(getApplicationContext(),cercar.class));
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
