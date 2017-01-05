@@ -128,7 +128,7 @@ public class DrawerActivity extends AppCompatActivity
             film = filmData.createFilm(newFilm[0], newFilm[0]);
             adapter.add(film);
         } else if (id == R.id.cercar) {
-            startActivity(new Intent(getApplicationContext(),cercar.class));
+            startActivity(new Intent(getApplicationContext(),Cercar.class));
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
