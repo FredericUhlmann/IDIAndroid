@@ -1,9 +1,6 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,15 +9,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.ListView;
+
+import java.util.List;
+import java.util.Random;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    private FilmData filmData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        super.setContentView(R.layout.activity_drawer);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -40,7 +46,23 @@ public class DrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+*/
+        setView();
+    }
 
+    protected void setView() {
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -81,8 +103,29 @@ public class DrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.afegir) {
+
+            filmData = new FilmData(this);
+            filmData.open();
+
+            List<Film> values = filmData.getAllFilms();
+            //ListView lv = (ListView) findViewById(R.id.listmain);
+            // use the SimpleCursorAdapter to show the
+            // elements in a ListView
+            ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, values);
+
+
+            ListView lv = (ListView) findViewById(R.id.llistapelis);
+            lv.setAdapter(adapter);
+            //afegir pelicula
+            adapter = (ArrayAdapter<Film>) lv.getAdapter();
+            Film film;
+            String[] newFilm = new String[] { "Polla2"};
+            int nextInt = new Random().nextInt(4);
+            // save the new film to the database
+            film = filmData.createFilm(newFilm[0], newFilm[0]);
+            adapter.add(film);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -98,5 +141,17 @@ public class DrawerActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void setContentView(int layoutResID) {
+
+        DrawerLayout fullLayout = (DrawerLayout) getLayoutInflater().inflate(R.layout.activity_drawer, null);
+        FrameLayout frameLayout = (FrameLayout) fullLayout.findViewById(R.id.frame_layout_drawer);
+
+        getLayoutInflater().inflate(layoutResID, frameLayout, true);
+
+        super.setContentView(fullLayout);
+        setView();
     }
 }
