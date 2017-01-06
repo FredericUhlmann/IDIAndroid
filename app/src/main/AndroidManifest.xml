@@ -25,6 +25,10 @@
         <activity
             android:name=".cercar"
             android:label="@string/title_activity_cercar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Cercar"
+            android:label="@string/title_activity_cercar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
