@@ -1,4 +1,6 @@
 # Built application files
+build/intermediates/dex-cache/cache.xml
+/build/*/
 /*/build/
 
 # Crashlytics configuations
