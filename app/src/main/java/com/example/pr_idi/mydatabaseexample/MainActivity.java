@@ -1,15 +1,15 @@
 package com.example.pr_idi.mydatabaseexample;
 
 
-import java.util.List;
-import java.util.Random;
-
-import android.app.ListActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends DrawerActivity {
     private FilmData filmData;
@@ -27,7 +27,15 @@ public class MainActivity extends DrawerActivity {
         filmData.open();
 
         List<Film> values = filmData.getAllFilms();
-        //ListView lv = (ListView) findViewById(R.id.listmain);
+
+        //ordenem les pelis per titol
+        Collections.sort(values, new Comparator<Film>() {
+            @Override
+            public int compare(Film peli1, Film peli2) {
+                return peli1.getTitle().compareTo(peli2.getTitle());
+            }
+        });
+
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
         ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,

@@ -1,5 +1,6 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -127,9 +128,11 @@ public class DrawerActivity extends AppCompatActivity
             film = filmData.createFilm(newFilm[0], newFilm[0]);
             adapter.add(film);
         } else if (id == R.id.cercar) {
-
-        } else if (id == R.id.nav_slideshow) {
-
+            Intent i = new Intent(getApplicationContext(),Cercar.class);
+            startActivity(i);
+        } else if (id == R.id.inici) {
+            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
