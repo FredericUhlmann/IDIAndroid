@@ -75,10 +75,10 @@ public class Cercar extends DrawerActivity {
             Film peli = values.get(i);
             String prota = peli.getTitle();
             System.out.println(prota);
-            /*System.out.println(prota.toLowerCase().contains(query.toLowerCase()));
+            //System.out.println(prota.toLowerCase().contains(query.toLowerCase()));
             if (prota.toLowerCase().contains(query.toLowerCase())){
                 newvalues.add(peli);
-            }*/
+            }
 
             ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
                     android.R.layout.simple_list_item_1, newvalues);
