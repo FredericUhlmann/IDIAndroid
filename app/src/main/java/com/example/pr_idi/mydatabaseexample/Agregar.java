@@ -19,7 +19,7 @@ public class Agregar extends DrawerActivity {
 
         filmData = new FilmData(this);
         filmData.open();
-        
+
         //Boton
         Button b_afegir = (Button) findViewById(R.id.b_afegir);
 
@@ -74,7 +74,7 @@ public class Agregar extends DrawerActivity {
 
                 }else {
                     /////////peta en el film data!!!!!(sols falta conectarho a la BD)
-                    //filmData.createFilm(a_titol, a_director);
+                    filmData.createFilm(a_titol, a_director,a_pais,Integer.parseInt(a_any),a_prota,Integer.parseInt(a_critiques));
 
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
