@@ -16,6 +16,10 @@ public class Agregar extends DrawerActivity {
         setContentView(R.layout.activity_agregar);
         setTitle("Agregar");
 
+
+        filmData = new FilmData(this);
+        filmData.open();
+        
         //Boton
         Button b_afegir = (Button) findViewById(R.id.b_afegir);
 
@@ -71,6 +75,7 @@ public class Agregar extends DrawerActivity {
                 }else {
                     /////////peta en el film data!!!!!(sols falta conectarho a la BD)
                     //filmData.createFilm(a_titol, a_director);
+
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
 
