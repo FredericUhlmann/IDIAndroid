@@ -103,6 +103,13 @@ public class FilmData {
         return comments;
     }
 
+    public void modificarNota(Film peli, int nota){
+        long id = peli.getId();
+        ContentValues values = new ContentValues();
+        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE,nota);
+        database.update(MySQLiteHelper.TABLE_FILMS, values, MySQLiteHelper.COLUMN_ID + "=" + id, null );
+    }
+
     private Film cursorToFilm(Cursor cursor) {
         Film film = new Film();
         film.setId(cursor.getLong(0));
