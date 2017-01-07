@@ -108,6 +108,9 @@ public class DrawerActivity extends AppCompatActivity
         } else if (id == R.id.inici) {
             Intent i = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(i);
+        } else if (id == R.id.filmoteca) {
+            Intent i = new Intent(getApplicationContext(),Filmoteca.class);
+            startActivity(i);
         } else if (id == R.id.help) {
 
         } else if (id == R.id.about) {

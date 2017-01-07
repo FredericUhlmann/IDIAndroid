@@ -8,4 +8,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_cercar">Cercar</string>
     <string name="title_activity_agregar">Agregar</string>
+    <string name="title_activity_filmoteca">Filmoteca</string>
 </resources>
