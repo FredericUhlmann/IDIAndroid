@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -105,8 +106,7 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.afegir) {
-
-            filmData = new FilmData(this);
+            /*filmData = new FilmData(this);
             filmData.open();
 
             List<Film> values = filmData.getAllFilms();
@@ -126,7 +126,10 @@ public class DrawerActivity extends AppCompatActivity
             int nextInt = new Random().nextInt(4);
             // save the new film to the database
             film = filmData.createFilm(newFilm[0], newFilm[0]);
-            adapter.add(film);
+            adapter.add(film);*/
+            Intent i = new Intent(getApplicationContext(),Agregar.class);
+            startActivity(i);
+
         } else if (id == R.id.cercar) {
             Intent i = new Intent(getApplicationContext(),Cercar.class);
             startActivity(i);

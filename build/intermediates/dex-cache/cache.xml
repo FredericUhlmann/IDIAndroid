@@ -3,66 +3,66 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_dc75fef44123b62d90fb1129e9229276fac15714\classes.dex" />
+        sha1="bf14279c57ee491f4106ea6826819728ee0b3e97">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_31d87ef7efef4bf8dbe9e2e695f0c4c58823a153/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_0a106665def7a1c7466c12396c35e4dab9e33e7a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ff68f8e4a80508719e7d959fdaa8e8ea657d5be">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_23b1ab5bc06b49623769ae2001215c4ee45ba441\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_be918492a5511dc5662358de5aa2757100bb14d2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0958275ff5251361e5a98f202c6a6819de5af604">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_bda08c95906e6c344fdc5214e14759ad5c1073a9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\POL\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_7b23e779290dc25b69fa12a4568d3b812b512929\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\POL\AndroidStudioProjects\IDIAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_1d8a6a488578bcff3d835063ece5a23e10fe219b\classes.dex" />
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_64110078c4bbfc4df8ebb947149aa5bf40ad265d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="027a42ba83a607df2a7c53968e2aafd903fb2368">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4f4122e6676aa05db6ef1777cb6891c0da982694/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_06a868edd0c2d06d63ada5018625594509bfd084/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-22.2.1_0a4aed5eafe46ef716bc30a27f4691f4ee39e69b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/fredy/Documentos/androidSDK/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_0c4ac36407797ef202a82505a0463c71f57273e4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_01575a611ed91fa2f3442fe57200a155ef1dc6b2/classes.dex" />
     </item>
 
 </items>
