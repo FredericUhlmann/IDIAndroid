@@ -73,10 +73,12 @@ public class Cercar extends DrawerActivity {
         //per cada pelicula, mirar si conte el autor
         for (int i = 0; i < values.size(); i++) {
             Film peli = values.get(i);
-            String autor = peli.getProtagonist();
-            if (autor != null && autor.toLowerCase().contains(query.toLowerCase())){
+            String prota = peli.getTitle();
+            System.out.println(prota);
+            /*System.out.println(prota.toLowerCase().contains(query.toLowerCase()));
+            if (prota.toLowerCase().contains(query.toLowerCase())){
                 newvalues.add(peli);
-            }
+            }*/
 
             ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
                     android.R.layout.simple_list_item_1, newvalues);
