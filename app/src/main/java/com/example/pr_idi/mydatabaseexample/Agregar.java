@@ -70,8 +70,16 @@ public class Agregar extends DrawerActivity {
                     toast.show();
 
                 }else {
-                    /////////peta en el film data!!!!!(sols falta conectarho a la BD)
-                    filmData.createFilm(a_titol, a_director,a_pais, a_any,a_prota,a_critiques);
+                    Film peli = new Film();
+
+                    peli.setTitle(a_titol);
+                    peli.setCountry(a_pais);
+                    peli.setYear(Integer.valueOf(a_any));
+                    peli.setDirector(a_director);
+                    peli.setProtagonist(a_prota);
+                    peli.setCritics_rate(Integer.valueOf(a_critiques));
+
+                    filmData.createFilm(peli);
 
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
