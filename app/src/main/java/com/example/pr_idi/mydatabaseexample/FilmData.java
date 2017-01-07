@@ -20,9 +20,16 @@ public class FilmData {
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
 
-    // Here we only select Title and Director, must select the appropriate columns
-    private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-            MySQLiteHelper.COLUMN_TITLE, MySQLiteHelper.COLUMN_DIRECTOR};
+    // allColumns actualitzat amb tots els camps necesaris
+    private String[] allColumns = {
+            MySQLiteHelper.COLUMN_ID,
+            MySQLiteHelper.COLUMN_TITLE,
+            MySQLiteHelper.COLUMN_COUNTRY,
+            MySQLiteHelper.COLUMN_YEAR_RELEASE,
+            MySQLiteHelper.COLUMN_DIRECTOR,
+            MySQLiteHelper.COLUMN_PROTAGONIST,
+            MySQLiteHelper.COLUMN_CRITICS_RATE
+    };
 
     public FilmData(Context context) {
         dbHelper = new MySQLiteHelper(context);
@@ -101,10 +108,10 @@ public class FilmData {
         film.setId(cursor.getLong(0));
         film.setTitle(cursor.getString(1));
         film.setDirector(cursor.getString(2));
-        /*film.setCountry(cursor.getString(3));
+        film.setCountry(cursor.getString(3));
         film.setYear(cursor.getInt(4));
         film.setProtagonist(cursor.getString(5));
-        film.setCritics_rate(cursor.getInt(6));*/
+        film.setCritics_rate(cursor.getInt(6));
 
         return film;
     }

@@ -54,10 +54,10 @@ public class MainActivity extends DrawerActivity {
             peli4.setCritics_rate(10);
             System.out.println("Hola");
             System.out.println(peli4.getProtagonist());
-            filmData.createFilm(peli.getTitle(),peli.getDirector(),peli.getCountry(),String.valueOf(peli.getYear()),peli.getProtagonist(),String.valueOf(peli.getCritics_rate()));
-            filmData.createFilm(peli2.getTitle(),peli2.getDirector(),peli2.getCountry(),String.valueOf(peli2.getYear()),peli2.getProtagonist(),String.valueOf(peli2.getCritics_rate()));
-            filmData.createFilm(peli3.getTitle(),peli3.getDirector(),peli3.getCountry(),String.valueOf(peli3.getYear()),peli3.getProtagonist(),String.valueOf(peli3.getCritics_rate()));
-            filmData.createFilm(peli4.getTitle(),peli4.getDirector(),peli4.getCountry(),String.valueOf(peli4.getYear()),peli4.getProtagonist(),String.valueOf(peli4.getCritics_rate()));
+            filmData.createFilm(peli);
+            filmData.createFilm(peli2);
+            filmData.createFilm(peli3);
+            filmData.createFilm(peli4);
             values = filmData.getAllFilms();
         }
 
