@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bf14279c57ee491f4106ea6826819728ee0b3e97">
+        sha1="6a225fa5e0a5d59f70523cafe26625479e5fa9b5">
         <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_31d87ef7efef4bf8dbe9e2e695f0c4c58823a153/classes.dex" />
     </item>
     <item
@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="027a42ba83a607df2a7c53968e2aafd903fb2368">
+        sha1="abdbf504fe7572f90dfc2aef99e8c077cbd5dbd7">
         <dex dex="/home/fredy/Documentos/UNI/IDI/AndroidApp/IDIAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4f4122e6676aa05db6ef1777cb6891c0da982694/classes.dex" />
     </item>
     <item

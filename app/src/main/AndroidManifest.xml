@@ -29,6 +29,10 @@
         <activity
             android:name=".Agregar"
             android:label="@string/title_activity_agregar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Filmoteca"
+            android:label="@string/title_activity_filmoteca"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
