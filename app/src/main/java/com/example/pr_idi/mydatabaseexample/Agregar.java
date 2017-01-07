@@ -1,13 +1,9 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Agregar extends DrawerActivity {
@@ -74,7 +70,7 @@ public class Agregar extends DrawerActivity {
 
                 }else {
                     /////////peta en el film data!!!!!(sols falta conectarho a la BD)
-                    filmData.createFilm(a_titol, a_director);
+                    //filmData.createFilm(a_titol, a_director);
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
 

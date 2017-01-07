@@ -38,7 +38,7 @@ public class Cercar extends DrawerActivity {
         ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, values);
 
-        final ListView lv = (ListView) findViewById(R.id.llista_cercar);
+        ListView lv = (ListView) findViewById(R.id.llista_cercar);
         lv.setAdapter(adapter);
 
 
@@ -51,16 +51,7 @@ public class Cercar extends DrawerActivity {
             public boolean onQueryTextSubmit(String query) {
 
                 if (!query.isEmpty()) {
-                    List<Film> values = filmData.getAllFilms();
-                    List<Film> newvalues = new ArrayList<>();
-                    for (int i = 0; i < values.size(); i++) {
-                        Film peli = values.get(i);
-                        String autor = peli.getProtagonist();
-                        //System.out.println(autor.toLowerCase().contains(query.toLowerCase()));
-
-                        System.out.println(peli.);
-                    }
-                    //newvalues.add()
+                    search(query);
                 }
 
                 return false;
@@ -73,11 +64,29 @@ public class Cercar extends DrawerActivity {
             }
 
         });
-
-
     }
 
+    protected void search(String query){
+        List<Film> values = filmData.getAllFilms();
+        List<Film> newvalues = new ArrayList<>();
 
+        //per cada pelicula, mirar si conte el autor
+        for (int i = 0; i < values.size(); i++) {
+            Film peli = values.get(i);
+            String autor = peli.getProtagonist();
+            if (autor != null && autor.toLowerCase().contains(query.toLowerCase())){
+                newvalues.add(peli);
+            }
+
+            ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, newvalues);
+
+            ListView lv = (ListView) findViewById(R.id.llista_cercar);
+            lv.setAdapter(adapter);
+            //System.out.println(autor.toLowerCase().contains(query.toLowerCase()));
+            //System.out.println(peli.);
+        }
+    }
 
 
 

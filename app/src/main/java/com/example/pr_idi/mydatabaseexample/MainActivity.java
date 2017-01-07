@@ -9,7 +9,6 @@ import android.widget.ListView;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
 
 public class MainActivity extends DrawerActivity {
     private FilmData filmData;
@@ -24,11 +23,47 @@ public class MainActivity extends DrawerActivity {
 
         List<Film> values = filmData.getAllFilms();
 
+        if (values.size() == 0){
+            Film peli = new Film();
+            peli.setDirector("Frederic Uhlman");
+            peli.setCountry("Catalunya");
+            peli.setProtagonist("Pol Alejandre");
+            peli.setTitle("Els putus");
+            peli.setYear(2017);
+            peli.setCritics_rate(10);
+            Film peli2 = new Film();
+            peli2.setDirector("Pol Alejandre");
+            peli2.setCountry("Catalunya");
+            peli2.setProtagonist("Frederic Uhlman");
+            peli2.setTitle("Els putus 2");
+            peli2.setYear(2017);
+            peli2.setCritics_rate(10);
+            Film peli3 = new Film();
+            peli3.setDirector("Joan Vicent");
+            peli3.setCountry("Catalunya");
+            peli3.setProtagonist("Pol Alejandre");
+            peli3.setTitle("El faker");
+            peli3.setYear(2017);
+            peli3.setCritics_rate(10);
+            Film peli4 = new Film();
+            peli4.setDirector("Frederic Uhlman");
+            peli4.setCountry("Catalunya");
+            peli4.setProtagonist("Pol Alejandre");
+            peli4.setTitle("Els putus 3");
+            peli4.setYear(2017);
+            peli4.setCritics_rate(10);
+            filmData.createFilm(peli.getTitle(),peli.getDirector(),peli.getCountry(),peli.getYear(),peli.getProtagonist(),peli.getCritics_rate());
+            filmData.createFilm(peli2.getTitle(),peli2.getDirector(),peli2.getCountry(),peli2.getYear(),peli2.getProtagonist(),peli2.getCritics_rate());
+            filmData.createFilm(peli3.getTitle(),peli3.getDirector(),peli3.getCountry(),peli3.getYear(),peli3.getProtagonist(),peli3.getCritics_rate());
+            filmData.createFilm(peli4.getTitle(),peli4.getDirector(),peli4.getCountry(),peli4.getYear(),peli4.getProtagonist(),peli4.getCritics_rate());
+            values = filmData.getAllFilms();
+        }
+
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
             @Override
-            public int compare(Film peli1, Film peli2) {
-                return peli1.getTitle().compareTo(peli2.getTitle());
+            public int compare(Film film1, Film film2) {
+                return film1.getTitle().compareTo(film2.getTitle());
             }
         });
 
@@ -49,13 +84,6 @@ public class MainActivity extends DrawerActivity {
         ArrayAdapter<Film> adapter = (ArrayAdapter<Film>) lv.getAdapter();
         Film film;
         switch (view.getId()) {
-            case R.id.add:
-                String[] newFilm = new String[] { "Blade Runner", "Ridley Scott", "Rocky Horror Picture Show", "Jim Sharman", "The Godfather", "Francis Ford Coppola", "Toy Story", "John Lasseter" };
-                int nextInt = new Random().nextInt(4);
-                // save the new film to the database
-                film = filmData.createFilm(newFilm[nextInt*2], newFilm[nextInt*2 + 1]);
-                adapter.add(film);
-                break;
             case R.id.delete:
                 if (lv.getCount() > 0) {
                     film = (Film) lv.getAdapter().getItem(lv.getAdapter().getCount()-1);

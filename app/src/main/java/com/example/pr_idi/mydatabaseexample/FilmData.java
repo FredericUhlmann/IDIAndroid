@@ -4,15 +4,15 @@ package com.example.pr_idi.mydatabaseexample;
  * FilmData
  * Created by pr_idi on 10/11/16.
  */
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FilmData {
 
@@ -36,7 +36,7 @@ public class FilmData {
         dbHelper.close();
     }
 
-    public Film createFilm(String title, String director) {
+    public Film createFilm(String title, String director, String country, Integer year, String protagonist, Integer critics) {
         ContentValues values = new ContentValues();
         Log.d("Creating", "Creating " + title + " " + director);
 
@@ -44,12 +44,10 @@ public class FilmData {
         // Must modify the method to add the full data
         values.put(MySQLiteHelper.COLUMN_TITLE, title);
         values.put(MySQLiteHelper.COLUMN_DIRECTOR, director);
-
-        // Invented data
-        values.put(MySQLiteHelper.COLUMN_COUNTRY, "Catalonia");
-        values.put(MySQLiteHelper.COLUMN_YEAR_RELEASE, 2014);
-        values.put(MySQLiteHelper.COLUMN_PROTAGONIST, "Do not know");
-        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, 5);
+        values.put(MySQLiteHelper.COLUMN_COUNTRY, country);
+        values.put(MySQLiteHelper.COLUMN_YEAR_RELEASE, year);
+        values.put(MySQLiteHelper.COLUMN_PROTAGONIST, protagonist);
+        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, critics);
 
         // Actual insertion of the data using the values variable
         long insertId = database.insert(MySQLiteHelper.TABLE_FILMS, null,

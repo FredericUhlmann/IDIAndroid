@@ -8,15 +8,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
-import android.widget.ListView;
-
-import java.util.List;
-import java.util.Random;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -106,30 +100,8 @@ public class DrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.afegir) {
-            /*filmData = new FilmData(this);
-            filmData.open();
-
-            List<Film> values = filmData.getAllFilms();
-            //ListView lv = (ListView) findViewById(R.id.listmain);
-            // use the SimpleCursorAdapter to show the
-            // elements in a ListView
-            ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
-                    android.R.layout.simple_list_item_1, values);
-
-
-            ListView lv = (ListView) findViewById(R.id.llistapelis);
-            lv.setAdapter(adapter);
-            //afegir pelicula
-            adapter = (ArrayAdapter<Film>) lv.getAdapter();
-            Film film;
-            String[] newFilm = new String[] { "Polla2"};
-            int nextInt = new Random().nextInt(4);
-            // save the new film to the database
-            film = filmData.createFilm(newFilm[0], newFilm[0]);
-            adapter.add(film);*/
             Intent i = new Intent(getApplicationContext(),Agregar.class);
             startActivity(i);
-
         } else if (id == R.id.cercar) {
             Intent i = new Intent(getApplicationContext(),Cercar.class);
             startActivity(i);
