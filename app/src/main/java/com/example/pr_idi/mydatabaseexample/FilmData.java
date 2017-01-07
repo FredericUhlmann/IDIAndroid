@@ -36,7 +36,7 @@ public class FilmData {
         dbHelper.close();
     }
 
-    public Film createFilm(String title, String director, String country, int year, String protagonist, int critics) {
+    public Film createFilm(String title, String director, String country, String year, String protagonist, String critics) {
         ContentValues values = new ContentValues();
         Log.d("Creating", "Creating " + title + " " + director);
 
@@ -101,6 +101,11 @@ public class FilmData {
         film.setId(cursor.getLong(0));
         film.setTitle(cursor.getString(1));
         film.setDirector(cursor.getString(2));
+        /*film.setCountry(cursor.getString(3));
+        film.setYear(cursor.getInt(4));
+        film.setProtagonist(cursor.getString(5));
+        film.setCritics_rate(cursor.getInt(6));*/
+
         return film;
     }
 }

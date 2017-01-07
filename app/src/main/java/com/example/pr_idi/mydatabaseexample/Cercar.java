@@ -71,8 +71,8 @@ public class Cercar extends DrawerActivity {
         List<Film> newvalues = new ArrayList<>();
 
         //per cada pelicula, mirar si conte el autor
-        for (int i = 0; i < values.size(); i++) {
-            Film peli = values.get(i);
+        for (Film peli : values) {
+
             //String prota = peli.getProtagonist();
             System.out.println("Title" + peli.getTitle());
             System.out.println("Director" + peli.getDirector());
