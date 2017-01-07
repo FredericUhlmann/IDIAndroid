@@ -24,7 +24,7 @@ public class Cercar extends DrawerActivity {
         filmData.open();
 
         List<Film> values = filmData.getAllFilms();
-
+        System.out.println(values.get(0).getProtagonist());
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
             @Override
@@ -73,12 +73,19 @@ public class Cercar extends DrawerActivity {
         //per cada pelicula, mirar si conte el autor
         for (int i = 0; i < values.size(); i++) {
             Film peli = values.get(i);
-            String prota = peli.getTitle();
-            System.out.println(prota);
+            //String prota = peli.getProtagonist();
+            System.out.println("Title" + peli.getTitle());
+            System.out.println("Director" + peli.getDirector());
+            System.out.println("Protagonist" + peli.getProtagonist());
+            System.out.println("Year" + peli.getYear());
+            System.out.println("Country" + peli.getCountry());
+            System.out.println("Critiques" + peli.getCritics_rate());
+
+            /*
             //System.out.println(prota.toLowerCase().contains(query.toLowerCase()));
             if (prota.toLowerCase().contains(query.toLowerCase())){
                 newvalues.add(peli);
-            }
+            }*/
 
             ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
                     android.R.layout.simple_list_item_1, newvalues);

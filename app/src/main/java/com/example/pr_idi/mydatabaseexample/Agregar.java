@@ -32,9 +32,6 @@ public class Agregar extends DrawerActivity {
         final EditText et_afegir_critiques = (EditText) findViewById(R.id.et_afegir_critiques);
 
 
-
-
-
         //Listener al boton
         b_afegir.setOnClickListener(new View.OnClickListener() {
             @Override

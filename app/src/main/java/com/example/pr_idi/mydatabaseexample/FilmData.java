@@ -36,7 +36,7 @@ public class FilmData {
         dbHelper.close();
     }
 
-    public Film createFilm(String title, String director, String country, Integer year, String protagonist, Integer critics) {
+    public Film createFilm(String title, String director, String country, int year, String protagonist, int critics) {
         ContentValues values = new ContentValues();
         Log.d("Creating", "Creating " + title + " " + director);
 
