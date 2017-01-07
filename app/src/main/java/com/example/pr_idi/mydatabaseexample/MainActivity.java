@@ -19,10 +19,6 @@ public class MainActivity extends DrawerActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        /*//obrir drawer activity
-        startActivity(new Intent(MainActivity.this, DrawerActivity.class));
-        */
-
         filmData = new FilmData(this);
         filmData.open();
 

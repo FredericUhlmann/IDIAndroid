@@ -133,7 +133,6 @@ public class DrawerActivity extends AppCompatActivity
         } else if (id == R.id.inici) {
             Intent i = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(i);
-            //polla
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
