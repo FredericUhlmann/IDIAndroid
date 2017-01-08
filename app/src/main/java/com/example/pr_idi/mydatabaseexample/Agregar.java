@@ -1,5 +1,6 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,6 +84,7 @@ public class Agregar extends DrawerActivity {
 
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
                 }
             }
