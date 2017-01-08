@@ -85,7 +85,6 @@ public class Agregar extends DrawerActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
                     toast.show();
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
                 }
             }
         });
