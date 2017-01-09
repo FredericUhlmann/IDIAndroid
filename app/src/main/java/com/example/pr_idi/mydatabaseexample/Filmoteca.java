@@ -5,6 +5,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Filmoteca extends DrawerActivity {
@@ -25,6 +28,22 @@ public class Filmoteca extends DrawerActivity {
         filmData.open();
         List<Film> dades = filmData.getAllFilms();
 
+        Collections.sort(dades, new Comparator<Film>() {
+            @Override
+            public int compare(Film lhs, Film rhs) {
+                Integer a1 = lhs.getYear();
+                Integer a2 = rhs.getYear();
+                Integer resta = a1 - a2;
+                if (a1.compareTo(a2) < 0) {
+                    return 1;
+                } else if (a1.compareTo(a2) > 0) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+
 
         //CREACIO DEL RECYCLER VIEW
 
@@ -37,5 +56,5 @@ public class Filmoteca extends DrawerActivity {
         mAdapter = new FilmAdapter(dades);
         mRecyclerView.setAdapter(mAdapter);
     }
-
 }
+

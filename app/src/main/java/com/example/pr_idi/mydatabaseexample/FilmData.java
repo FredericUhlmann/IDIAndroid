@@ -114,9 +114,9 @@ public class FilmData {
         Film film = new Film();
         film.setId(cursor.getLong(0));
         film.setTitle(cursor.getString(1));
-        film.setDirector(cursor.getString(2));
-        film.setCountry(cursor.getString(3));
-        film.setYear(cursor.getInt(4));
+        film.setCountry(cursor.getString(2));
+        film.setYear(cursor.getInt(3));
+        film.setDirector(cursor.getString(4));
         film.setProtagonist(cursor.getString(5));
         film.setCritics_rate(cursor.getInt(6));
 

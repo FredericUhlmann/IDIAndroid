@@ -91,9 +91,11 @@ public class DrawerActivity extends AppCompatActivity
             Intent i = new Intent(getApplicationContext(),Filmoteca.class);
             startActivity(i);
         } else if (id == R.id.help) {
-
+            Intent i = new Intent(getApplicationContext(),Help.class);
+            startActivity(i);
         } else if (id == R.id.about) {
-
+            Intent i = new Intent(getApplicationContext(),About.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

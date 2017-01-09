@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class Agregar extends DrawerActivity {
 
     private FilmData filmData;
@@ -45,8 +47,14 @@ public class Agregar extends DrawerActivity {
                 String a_prota = et_afegir_prota.getText().toString();
                 String a_critiques = et_afegir_critiques.getText().toString();
                 Integer num_critiques = 0;
+                Integer num_any = 0;
+
                 if (!a_critiques.equals("")) {
                      num_critiques = Integer.parseInt(a_critiques);
+                }
+
+                if (!a_any.equals("")) {
+                    num_any = Integer.parseInt(a_any);
                 }
 
 
@@ -66,10 +74,15 @@ public class Agregar extends DrawerActivity {
 
                 }else if (num_critiques < 0 || num_critiques > 10){
 
-                    //Se muestra un toast indicando que todos los campos son obligatorios
+                    //Se muestra un toast indicando que la nota tiene que estar entre 0 y 10
                     Toast toast = Toast.makeText(getApplicationContext(), "La nota ha de ser entre 0 i 10", Toast.LENGTH_SHORT);
                     toast.show();
 
+                }else if (num_any < 1800 || num_any > 2017){
+
+                    //Se muestra un toast indicando que el año de estrena tiene que estar entre 1800 y 2017
+                    Toast toast = Toast.makeText(getApplicationContext(), "L'any d'estrena ha de ser entre 1800 i 2017", Toast.LENGTH_SHORT);
+                    toast.show();
                 }else {
                     Film peli = new Film();
 
@@ -80,11 +93,25 @@ public class Agregar extends DrawerActivity {
                     peli.setProtagonist(a_prota);
                     peli.setCritics_rate(Integer.valueOf(a_critiques));
 
-                    filmData.createFilm(peli);
+                    Boolean b = true;
+                    List<Film> comprobacio = filmData.getAllFilms();
+                    for (Film movie : comprobacio) {
+                        if (movie.getTitle().equals(a_titol))b = false;
+                    }
+                    if (b) {
+                        filmData.createFilm(peli);
 
-                    Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
-                    toast.show();
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        Toast toast = Toast.makeText(getApplicationContext(), "CREADA", Toast.LENGTH_SHORT);
+                        toast.show();
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    }
+                    else {
+                        //Se muestra un toast indicando que esta palícula ya existe
+                        Toast toast = Toast.makeText(getApplicationContext(), "Aquesta pel·lícula ja està afegida", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+
+
                 }
             }
         });

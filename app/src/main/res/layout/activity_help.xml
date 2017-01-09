@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.pr_idi.mydatabaseexample.Filmoteca">
+    tools:context="com.example.pr_idi.mydatabaseexample.Help">
 
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rv_filmoteca"
-        android:isScrollContainer="true" />
+
+    <include layout="@layout/content_help" />
+
+
+
 </android.support.design.widget.CoordinatorLayout>

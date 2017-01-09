@@ -68,17 +68,12 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder> {
         // - replace the contents of the view with that element
 
         holder.tv1.setText(mDataset.get(position).getTitle());
-        Log.v("FILM ADAPTER", "not yet 1");
         holder.tv2.setText(mDataset.get(position).getCountry());
-        Log.v("FILM ADAPTER", "not yet 2");
         holder.tv3.setText(Integer.toString(mDataset.get(position).getYear()));
-        Log.v("FILM ADAPTER", "not yet 3");
         holder.tv4.setText(mDataset.get(position).getDirector());
-        Log.v("FILM ADAPTER", "not yet 4");
         holder.tv5.setText(mDataset.get(position).getProtagonist());
-        Log.v("FILM ADAPTER", "not yet 5");
         holder.tv6.setText(Integer.toString(mDataset.get(position).getCritics_rate()));
-        Log.v("FILM ADAPTER", "not yet 6");
+
 
 
     }

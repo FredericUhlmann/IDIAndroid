@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="#4CAF50"
+    android:layout_margin="15dp">
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_1" />
+        android:id="@+id/rv_tv_1"
+        android:textColor="#F5F5F5"
+        android:textStyle="normal|bold"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_2" />
+        android:id="@+id/rv_tv_2"
+        android:textColor="#212121"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:gravity="center" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_3" />
+        android:id="@+id/rv_tv_3"
+        android:textColor="#212121"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:gravity="center" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_4" />
+        android:id="@+id/rv_tv_4"
+        android:textColor="#212121"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:gravity="center" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_5" />
+        android:id="@+id/rv_tv_5"
+        android:textColor="#212121"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:gravity="center" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rv_tv_6" />
+        android:id="@+id/rv_tv_6"
+        android:textColor="#212121"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:gravity="center" />
 </LinearLayout>
