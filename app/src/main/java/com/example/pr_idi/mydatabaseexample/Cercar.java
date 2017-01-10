@@ -28,6 +28,7 @@ public class Cercar extends DrawerActivity {
 
         List<Film> values = filmData.getAllFilms();
         System.out.println(values.get(0).getProtagonist());
+
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
             @Override
