@@ -2,33 +2,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="0.16">
+
+        <TextView
+            android:text="PELICULES ORDENADES..."
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:gravity="center" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06">
 
         <Button
-            android:id="@+id/add"
+            android:text="per titol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add New"
+            android:id="@+id/ordertitol"
+            android:layout_weight="1"
             android:onClick="onClick"/>
 
         <Button
-            android:id="@+id/delete"
+            android:text="per director"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete First"
+            android:id="@+id/orderdirector"
+            android:layout_weight="1"
             android:onClick="onClick"/>
 
+        <Button
+            android:text="per any"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderany"
+            android:layout_weight="1"
+            android:onClick="onClick"/>
     </LinearLayout>
 
     <ListView
         android:id="@+id/listmain"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="415dp"
         />
 
 </LinearLayout>

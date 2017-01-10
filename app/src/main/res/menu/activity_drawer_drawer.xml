@@ -18,13 +18,9 @@
             android:id="@+id/filmoteca"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Filmoteca" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Mes">
         <menu>
             <item
                 android:id="@+id/help"

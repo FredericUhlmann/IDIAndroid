@@ -40,6 +40,10 @@
         <activity
             android:name=".Help"
             android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InfoPeli"
+            android:label="@string/title_activity_info_peli"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

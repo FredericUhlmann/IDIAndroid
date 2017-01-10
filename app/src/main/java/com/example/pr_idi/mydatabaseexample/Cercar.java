@@ -1,6 +1,9 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -41,9 +44,21 @@ public class Cercar extends DrawerActivity {
         ListView lv = (ListView) findViewById(R.id.llista_cercar);
         lv.setAdapter(adapter);
 
+        //implementem clicklistener per a quan clikem a una peli
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String title = adapterView.getAdapter().getItem(i).toString();
+                Intent intent = new Intent(getApplicationContext(), InfoPeli.class);
+                //li passem el intent amb el titol de la peli
+                intent.putExtra("title", title);
+                startActivity(intent);
+            }
+        });
+
 
         SearchView searchView = (SearchView) findViewById(R.id.cerca_view);
-        searchView.setQueryHint("Buscar titol...");
+        searchView.setQueryHint("Buscar actor...");
 
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
