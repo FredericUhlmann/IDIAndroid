@@ -38,7 +38,7 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:text="És un llistat ordenat per títol que conté la informació relativa al títol i al director de les pel·lícules. Aquesta llista pot ser reordenada per títol, diretor o any d'estrena, amb un sol clic al botó relatiu al ordre desitjat."
+                android:text="És un llistat ordenat per títol que conté la informació relativa al títol i al director de les pel·lícules. Aquesta llista pot ser reordenada per títol, director o any d'estrena, amb un sol clic al botó relatiu al ordre desitjat."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView16" />
@@ -67,7 +67,7 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:text="És una funcionalitat que llista películes, mostrant títol i diretor, i a la que es poden realitzar cerques per protagonista. El llistat resultant serà el conjunt de totes les pel·lícules en les que l'actor buscat n'és el protagonista."
+                android:text="És una funcionalitat que llista películes, mostrant títol i director, i a la que es poden realitzar cerques per protagonista. El llistat resultant serà el conjunt de totes les pel·lícules en les que l'actor buscat n'és el protagonista."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView17" />
@@ -108,7 +108,7 @@
                 android:id="@+id/textView22" />
 
             <TextView
-                android:text="L'any d'estrena ha d'estar entre els anys 1850 i 2017."
+                android:text="L'any d'estrena ha d'estar entre els anys 1850 i l'any actual."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView23" />
@@ -166,7 +166,7 @@
                 android:layout_height="20dp" />
 
             <TextView
-                android:text="Permet una visualització de tote les dades d'una pel·lícula. Adicionalment té les funcionalitats de borrar la pel·lícula i modificar la nota de les seves crítiques. És una funcionalitat accessible amb un clic a la pel·lícula desitjada en les pantalles d'inici i cerca."
+                android:text="Permet una visualització de totes les dades d'una pel·lícula. Adicionalment té les funcionalitats d'esborrar la pel·lícula i modificar la nota de les seves crítiques. És una funcionalitat accessible amb un clic a la pel·lícula desitjada en les pantalles d'inici i cerca."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView20" />
