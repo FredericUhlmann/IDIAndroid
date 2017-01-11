@@ -13,7 +13,7 @@
         <item
             android:id="@+id/afegir"
             android:icon="@drawable/ic_menu_add"
-            android:title="Afegir pelicula" />
+            android:title="Afegir pel·lícula" />
         <item
             android:id="@+id/filmoteca"
             android:icon="@drawable/ic_menu_slideshow"
