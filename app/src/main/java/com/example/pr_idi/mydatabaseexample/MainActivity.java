@@ -20,14 +20,14 @@ public class MainActivity extends DrawerActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        setTitle("Llista de pelicules");
+        setTitle("Llista de pel·lícules");
 
         filmData = new FilmData(this);
         filmData.open();
 
-        List<Film> values = filmData.getAllFilms();
-
         creaPelisBase();
+
+        List<Film> values = filmData.getAllFilms();
 
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
@@ -124,7 +124,7 @@ public class MainActivity extends DrawerActivity {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
-        if (settings.getBoolean("first", true)) {
+        if (settings.getBoolean("primercop", true)) {
             // first time task
             Film peli = new Film();
             peli.setDirector("Christopher Nolan");
@@ -159,7 +159,7 @@ public class MainActivity extends DrawerActivity {
             filmData.createFilm(peli3);
             filmData.createFilm(peli4);
             // record the fact that the app has been started at least once
-            settings.edit().putBoolean("first", false).commit();
+            settings.edit().putBoolean("primercop", false).commit();
         }
 
     }

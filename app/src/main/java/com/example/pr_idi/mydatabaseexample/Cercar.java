@@ -27,7 +27,6 @@ public class Cercar extends DrawerActivity {
         filmData.open();
 
         List<Film> values = filmData.getAllFilms();
-        System.out.println(values.get(0).getProtagonist());
 
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
@@ -59,7 +58,7 @@ public class Cercar extends DrawerActivity {
 
 
         SearchView searchView = (SearchView) findViewById(R.id.cerca_view);
-        searchView.setQueryHint("Buscar actor...");
+        searchView.setQueryHint("Cercar actor...");
 
         searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
@@ -69,6 +68,7 @@ public class Cercar extends DrawerActivity {
                 if (!query.isEmpty()) {
                     search(query);
                 }
+                else search("@totselsactors@");
 
                 return false;
             }
@@ -85,22 +85,27 @@ public class Cercar extends DrawerActivity {
     protected void search(String query){
         List<Film> values = filmData.getAllFilms();
         List<Film> newvalues = new ArrayList<>();
+        ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, values);
 
-        //per cada pelicula, mirar si conte el autor
-        for (Film peli : values) {
+        if (query != "@totselsactors@") {
+            //per cada pelicula, mirar si conte el autor
+            for (Film peli : values) {
 
-            String prota = peli.getProtagonist();
+                String prota = peli.getProtagonist();
 
-            if (prota.toLowerCase().contains(query.toLowerCase())){
-                newvalues.add(peli);
+                if (prota.toLowerCase().contains(query.toLowerCase())) {
+                    newvalues.add(peli);
+                }
+
+                adapter = new ArrayAdapter<>(this,
+                        android.R.layout.simple_list_item_1, newvalues);
+
             }
-
-            ArrayAdapter<Film> adapter = new ArrayAdapter<>(this,
-                    android.R.layout.simple_list_item_1, newvalues);
-
-            ListView lv = (ListView) findViewById(R.id.llista_cercar);
-            lv.setAdapter(adapter);
         }
+
+        ListView lv = (ListView) findViewById(R.id.llista_cercar);
+        lv.setAdapter(adapter);
     }
 
 

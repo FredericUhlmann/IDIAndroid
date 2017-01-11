@@ -28,7 +28,7 @@ public class InfoPeli extends DrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_peli);
-        setTitle("Informació de la pelicula");
+        setTitle("Informació de la pel·lícula");
 
         filmData = new FilmData(this);
         filmData.open();
@@ -93,7 +93,7 @@ public class InfoPeli extends DrawerActivity {
             startActivity(intent);
         }
         else {
-            Toast toast = Toast.makeText(getApplicationContext(), "La nota ha de estar entre 0 i 10.", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(getApplicationContext(), "La nota ha d'estar entre 0 i 10.", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
@@ -133,7 +133,7 @@ public class InfoPeli extends DrawerActivity {
                 switch (which){
                     case DialogInterface.BUTTON_POSITIVE:
                         filmData.deleteFilm(peli);
-                        Toast toast = Toast.makeText(getApplicationContext(), "Pelicula " + peli.getTitle() + " eliminada.", Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(getApplicationContext(), "Pel·lícula " + peli.getTitle() + " eliminada.", Toast.LENGTH_SHORT);
                         toast.show();
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         break;
@@ -147,7 +147,7 @@ public class InfoPeli extends DrawerActivity {
 
         //dialolg per a confirmar l'esborrat de la peli
         AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
-        builder2.setMessage("Segur que vols eliminar la pelicula?").setPositiveButton("Si", dialogClickListener)
+        builder2.setMessage("Segur que vols eliminar la pel·lícula?").setPositiveButton("Si", dialogClickListener)
                 .setNegativeButton("No", dialogClickListener).show();
     }
 }

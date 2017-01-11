@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class Agregar extends DrawerActivity {
@@ -17,7 +18,7 @@ public class Agregar extends DrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar);
-        setTitle("Agregar");
+        setTitle("Agregar pel·lícula");
 
 
         filmData = new FilmData(this);
@@ -57,6 +58,8 @@ public class Agregar extends DrawerActivity {
                     num_any = Integer.parseInt(a_any);
                 }
 
+                Calendar c = Calendar.getInstance();
+                int year = c.get(Calendar.YEAR);
 
                 if(
                     a_titol.equals("") ||
@@ -78,10 +81,10 @@ public class Agregar extends DrawerActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "La nota ha de ser entre 0 i 10", Toast.LENGTH_SHORT);
                     toast.show();
 
-                }else if (num_any < 1800 || num_any > 2017){
+                }else if (num_any < 1800 || num_any > year){
 
-                    //Se muestra un toast indicando que el año de estrena tiene que estar entre 1800 y 2017
-                    Toast toast = Toast.makeText(getApplicationContext(), "L'any d'estrena ha de ser entre 1800 i 2017", Toast.LENGTH_SHORT);
+                    //Se muestra un toast indicando que el año de estrena tiene que estar entre 1800 y any actual
+                    Toast toast = Toast.makeText(getApplicationContext(), "L'any d'estrena ha de ser entre 1800 i " + year, Toast.LENGTH_SHORT);
                     toast.show();
                 }else {
                     Film peli = new Film();
