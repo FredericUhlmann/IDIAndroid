@@ -13,4 +13,164 @@
     tools:context="com.example.pr_idi.mydatabaseexample.Help"
     tools:showIn="@layout/activity_help">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Inici"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:textColor="#4CAF50"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="És un llistat ordenat per títol que conté la informació relativa al títol i al director de les pel·lícules. Aquesta llista pot ser reordenada per títol, diretor o any d'estrena, amb un sol clic al botó relatiu al ordre desitjat."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16" />
+
+            <TextView
+                android:text="Adicionalment, un clic sobre una pel·lícula portarà a la pantalla de la informació detallada de la pel·lícula en qüestió."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Cercar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textColor="#4CAF50"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="És una funcionalitat que llista películes, mostrant títol i diretor, i a la que es poden realitzar cerques per protagonista. El llistat resultant serà el conjunt de totes les pel·lícules en les que l'actor buscat n'és el protagonista."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView17" />
+
+            <TextView
+                android:text="Adicionalment, un clic sobre una pel·lícula portarà a la pantalla de la informació detallada de la pel·lícula en qüestió."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView26" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Afegir pel·lícula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:textColor="#4CAF50"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="Funcionalitat dissenyada per a afagir noves pel·lícules a la base de dades. A continuació es llisten els requeriments per a afagir una pel·lícula:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView18" />
+
+            <TextView
+                android:text="Tots els camps són obligatoris. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22" />
+
+            <TextView
+                android:text="L'any d'estrena ha d'estar entre els anys 1850 i 2017."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23" />
+
+            <TextView
+                android:text="La nota de les crítiques ha d'estar entre 0 i 10."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24" />
+
+            <TextView
+                android:text="No pot existir una pel·lícula amb el mateix títol a la base de dades."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView25" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Filmoteca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView13"
+                android:textColor="#4CAF50"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="Permet la visualització de totes les pel·lícules amb totes les seves dades per tenir una visió general de la base de dades i la informació que conté. Les pel·lícules estan ordenades per any d'estrena de més nova a més antiga."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="Informació de pel·lícula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                android:textColor="#4CAF50"
+                android:textStyle="normal|bold"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="Permet una visualització de tote les dades d'una pel·lícula. Adicionalment té les funcionalitats de borrar la pel·lícula i modificar la nota de les seves crítiques. És una funcionalitat accessible amb un clic a la pel·lícula desitjada en les pantalles d'inici i cerca."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
