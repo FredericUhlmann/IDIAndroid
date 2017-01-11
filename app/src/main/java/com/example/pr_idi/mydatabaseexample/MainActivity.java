@@ -2,6 +2,7 @@ package com.example.pr_idi.mydatabaseexample;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,10 +27,7 @@ public class MainActivity extends DrawerActivity {
 
         List<Film> values = filmData.getAllFilms();
 
-        if (values.size() == 0){
-            creaPelisBase();
-            values = filmData.getAllFilms();
-        }
+        creaPelisBase();
 
         //ordenem les pelis per titol
         Collections.sort(values, new Comparator<Film>() {
@@ -121,40 +119,49 @@ public class MainActivity extends DrawerActivity {
     }
 
     private void creaPelisBase(){
-        Film peli = new Film();
-        peli.setDirector("Frederic Uhlman");
-        peli.setCountry("Catalunya");
-        peli.setProtagonist("Pol Alejandre");
-        peli.setTitle("Els putus");
-        peli.setYear(2017);
-        peli.setCritics_rate(10);
-        Film peli2 = new Film();
-        peli2.setDirector("Pol Alejandre");
-        peli2.setCountry("Catalunya");
-        peli2.setProtagonist("Frederic Uhlman");
-        peli2.setTitle("Els putus 2");
-        peli2.setYear(2017);
-        peli2.setCritics_rate(10);
-        Film peli3 = new Film();
-        peli3.setDirector("Joan Vicent");
-        peli3.setCountry("Catalunya");
-        peli3.setProtagonist("Pol Alejandre");
-        peli3.setTitle("El faker");
-        peli3.setYear(2017);
-        peli3.setCritics_rate(10);
-        Film peli4 = new Film();
-        peli4.setDirector("Frederic Uhlman");
-        peli4.setCountry("Catalunya");
-        peli4.setProtagonist("Pol Alejandre");
-        peli4.setTitle("Els putus 3");
-        peli4.setYear(2017);
-        peli4.setCritics_rate(10);
-        System.out.println("Hola");
-        System.out.println(peli4.getProtagonist());
-        filmData.createFilm(peli);
-        filmData.createFilm(peli2);
-        filmData.createFilm(peli3);
-        filmData.createFilm(peli4);
+
+        final String PREFS_NAME = "MyPrefsFile";
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
+        if (settings.getBoolean("first", true)) {
+            // first time task
+            Film peli = new Film();
+            peli.setDirector("Christopher Nolan");
+            peli.setCountry("USA");
+            peli.setProtagonist("Leonardo DiCaprio");
+            peli.setTitle("Inception");
+            peli.setYear(2010);
+            peli.setCritics_rate(9);
+            Film peli2 = new Film();
+            peli2.setDirector("Quentin Tarantino");
+            peli2.setCountry("USA");
+            peli2.setProtagonist("Jamie Foxx");
+            peli2.setTitle("Django Unchained");
+            peli2.setYear(2012);
+            peli2.setCritics_rate(8);
+            Film peli3 = new Film();
+            peli3.setDirector("Hermanas Wachowski");
+            peli3.setCountry("USA / Australia");
+            peli3.setProtagonist("Keanu Reeves");
+            peli3.setTitle("Matrix");
+            peli3.setYear(1999);
+            peli3.setCritics_rate(10);
+            Film peli4 = new Film();
+            peli4.setDirector("Robert Zemeckis");
+            peli4.setCountry("USA");
+            peli4.setProtagonist("Tom Hanks");
+            peli4.setTitle("Forrest Gump");
+            peli4.setYear(1994);
+            peli4.setCritics_rate(10);
+            filmData.createFilm(peli);
+            filmData.createFilm(peli2);
+            filmData.createFilm(peli3);
+            filmData.createFilm(peli4);
+            // record the fact that the app has been started at least once
+            settings.edit().putBoolean("first", false).commit();
+        }
+
     }
 
     @Override
